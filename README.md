@@ -12,7 +12,7 @@ Written by Alan Coggins
 Version 1.0.1
 
 
-This is a small plugin designed to be used on websites managed by Simply Computing. It logs all mail sent by a ClassiPress site.
+This is a small plugin designed to be used on websites managed by Simply Computing. It logs all mail sent by a ClassicPress site.
 
 Changelog:
 
