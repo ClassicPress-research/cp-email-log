@@ -1,27 +1,25 @@
 <?php
-/**
+/*
  * Plugin Name: SC Email Log
- * Plugin URI: https://simplycomputing.com.au
+ * Plugin URI: https://github.com/simplycomputing/sc-email-log
  * Description: Logs every email sent through ClassicPress
- * Author: Alan Coggins
- * Version: 1.0.0
+ *
+ * Version: 1.0.1
+ *
+ * Author: Alan Coggins 
  * Author URI: https://simplycomputing.com.au
+ * License: GPLv2
  * Text Domain: email-log
  * Domain Path: languages/
  */
 
-/**
+/*
+ * Copyright 2019  Alan Coggins  (email : mail@simplycomputing.com.au)
  * Based on a plugin by Sudar Muthu.
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License, version 2, as
- * published by the Free Software Foundation.
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA.
+ * This is free software released under the terms of the General Public License,
+ * version 2, or later. It is distributed WITHOUT ANY WARRANTY; without even the
+ * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Full
+ * text of the license is available at https://www.gnu.org/licenses/gpl-2.0.txt.
  */
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
