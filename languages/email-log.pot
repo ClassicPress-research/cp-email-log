@@ -1,0 +1,907 @@
+# Copyright (C) 2019 Email Log
+# This file is distributed under the same license as the Email Log package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Email Log 2.3.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/email-log\n"
+"POT-Creation-Date: 2019-04-11 11:03:17+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: dist/email-log.php:49 email-log.php:49
+msgid ""
+"Email Log requires at least PHP 5.3 to function properly. Please upgrade PHP "
+"or use <a href=\"%s\" target=\"_blank\" rel=\"noopener\">v1.9.1 of Email "
+"Log</a>."
+msgstr ""
+
+#: dist/include/Addon/API/EDDAPI.php:115 include/Addon/API/EDDAPI.php:115
+msgid ""
+"Unknown error occurred while trying to contact Email Log store. Please try "
+"again after sometime. If the problem persists contact support."
+msgstr ""
+
+#: dist/include/Addon/API/EDDAPI.php:122 include/Addon/API/EDDAPI.php:122
+msgid ""
+"Unable to parse the response Email Log store response. Please try again "
+"after sometime. If the problem persists contact support."
+msgstr ""
+
+#: dist/include/Addon/Addon.php:130 include/Addon/Addon.php:130
+msgctxt "Installed on website but not activated"
+msgid "Installed"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:133 include/Addon/Addon.php:133
+msgctxt "Installed and activated on website"
+msgid "Activated"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:135 include/Addon/Addon.php:135
+msgctxt "Enable addon so it may be used"
+msgid "Activate"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:143 include/Addon/Addon.php:143
+msgctxt "Download to your computer"
+msgid "Download"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:168 include/Addon/Addon.php:168
+msgctxt "Download add-on"
+msgid "Activate License to Download"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:171 include/Addon/Addon.php:171
+msgctxt "Download and activate addon"
+msgid "Activate License to Use"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:176 include/Addon/Addon.php:176
+msgid "You need an active license to use the add-on"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:186 dist/include/Addon/License/Licenser.php:104
+#: include/Addon/Addon.php:186 include/Addon/License/Licenser.php:104
+msgid "Activate"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:194 dist/include/Addon/License/Licenser.php:112
+#: include/Addon/Addon.php:194 include/Addon/License/Licenser.php:112
+msgid "Deactivate"
+msgstr ""
+
+#. translators: 1 License expiry date, 2 License Renewal link
+#: dist/include/Addon/Addon.php:203 dist/include/Addon/License/Licenser.php:118
+#: include/Addon/Addon.php:203 include/Addon/License/Licenser.php:118
+msgid ""
+"Your license has expired on %1$s. Please <a href=\"%2$s\">renew it</a> to "
+"receive automatic updates and support."
+msgstr ""
+
+#. translators: 1 License expiry date
+#: dist/include/Addon/Addon.php:206 dist/include/Addon/License/Licenser.php:122
+#: include/Addon/Addon.php:206 include/Addon/License/Licenser.php:122
+msgid "Your license is valid till %s"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:212 include/Addon/Addon.php:212
+msgid "Individual add-on license"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:217 include/Addon/Addon.php:217
+msgid "Email Log License Key"
+msgstr ""
+
+#: dist/include/Addon/Addon.php:218 include/Addon/Addon.php:218
+msgid "%s Add-on License Key"
+msgstr ""
+
+#: dist/include/Addon/AddonList.php:177 include/Addon/AddonList.php:177
+msgid ""
+"We are not able to retrieve the add-on list now. Please visit the <a target="
+"\"_blank\" rel=\"noopener\" href=\"%s\">add-on page</a> to view the add-ons."
+msgstr ""
+
+#: dist/include/Addon/DependencyEnforcer.php:46
+#: include/Addon/DependencyEnforcer.php:46
+msgid ""
+"The following add-ons are not compatible with the installed version of Email "
+"Log and have been deactivated."
+msgstr ""
+
+#: dist/include/Addon/DependencyEnforcer.php:54
+#: include/Addon/DependencyEnforcer.php:54
+msgid "Please get the latest version of these add-ons from add-on store."
+msgstr ""
+
+#. translators: 1 License expiry date, 2 License Renewal link
+#: dist/include/Addon/License/BaseLicense.php:173
+#: include/Addon/License/BaseLicense.php:173
+msgid ""
+"Your license key expired on %1$s. Please <a href=\"%2$s\">renew it</a> to "
+"receive automatic updates and support."
+msgstr ""
+
+#: dist/include/Addon/License/BaseLicense.php:180
+#: include/Addon/License/BaseLicense.php:180
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: dist/include/Addon/License/BaseLicense.php:184
+#: include/Addon/License/BaseLicense.php:184
+msgid "Your license key is invalid."
+msgstr ""
+
+#: dist/include/Addon/License/BaseLicense.php:189
+#: include/Addon/License/BaseLicense.php:189
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#. translators: 1 Add-on name
+#: dist/include/Addon/License/BaseLicense.php:194
+#: include/Addon/License/BaseLicense.php:194
+msgid "Your license key is not valid for %s."
+msgstr ""
+
+#. translators: 1 License Upgrade link
+#: dist/include/Addon/License/BaseLicense.php:200
+#: include/Addon/License/BaseLicense.php:200
+msgid ""
+"Your license key has reached its activation limit. Please <a href=\"%s"
+"\">upgrade</a> your license."
+msgstr ""
+
+#: dist/include/Addon/License/BaseLicense.php:206
+#: dist/include/Addon/License/BaseLicense.php:237
+#: include/Addon/License/BaseLicense.php:206
+#: include/Addon/License/BaseLicense.php:237
+msgid "An error occurred, please try again."
+msgstr ""
+
+#: dist/include/Addon/License/BaseLicense.php:261
+#: include/Addon/License/BaseLicense.php:261
+msgid "An error occurred, please try again"
+msgstr ""
+
+#: dist/include/Addon/License/Licenser.php:133
+#: include/Addon/License/Licenser.php:133
+msgid ""
+"Enter your license key to activate add-ons. If you don't have a license, "
+"then you can <a href='%s' target='_blank'>buy it</a>"
+msgstr ""
+
+#: dist/include/Addon/License/Licenser.php:142
+#: dist/include/Addon/License/Licenser.php:143
+#: include/Addon/License/Licenser.php:142
+#: include/Addon/License/Licenser.php:143
+msgid "Email Log Bundle License Key"
+msgstr ""
+
+#: dist/include/Addon/License/Licenser.php:168
+#: include/Addon/License/Licenser.php:168
+msgid "Additional fields are available through More Fields add-on. "
+msgstr ""
+
+#: dist/include/Addon/License/Licenser.php:172
+#: include/Addon/License/Licenser.php:172
+msgid "Install it"
+msgstr ""
+
+#: dist/include/Addon/License/Licenser.php:176
+#: include/Addon/License/Licenser.php:176
+msgid "Buy Now"
+msgstr ""
+
+#: dist/include/Addon/License/Licenser.php:195
+#: include/Addon/License/Licenser.php:195
+msgid ""
+"Your license has been activated. You can now install add-ons, will receive "
+"automatic updates and access to email support."
+msgstr ""
+
+#: dist/include/Addon/License/Licenser.php:211
+#: include/Addon/License/Licenser.php:211
+msgid ""
+"Your license has been deactivated. You will not receive automatic updates."
+msgstr ""
+
+#: dist/include/Addon/License/Licenser.php:254
+#: include/Addon/License/Licenser.php:254
+msgid ""
+"Your license for %s has been activated. You will receive automatic updates "
+"and access to email support."
+msgstr ""
+
+#: dist/include/Addon/License/Licenser.php:281
+#: include/Addon/License/Licenser.php:281
+msgid ""
+"Your license for %s has been deactivated. You will not receive automatic "
+"updates."
+msgstr ""
+
+#: dist/include/Core/Request/LogListAction.php:50
+#: dist/include/Util/helper.php:265 include/Core/Request/LogListAction.php:50
+#: include/Util/helper.php:265
+msgid "Sent at"
+msgstr ""
+
+#: dist/include/Core/Request/LogListAction.php:54
+#: dist/include/Util/helper.php:266 dist/include/Util/helper.php:267
+#: include/Core/Request/LogListAction.php:54 include/Util/helper.php:266
+#: include/Util/helper.php:267
+msgid "To"
+msgstr ""
+
+#: dist/include/Core/Request/LogListAction.php:58
+#: dist/include/Util/helper.php:268 include/Core/Request/LogListAction.php:58
+#: include/Util/helper.php:268
+msgid "Subject"
+msgstr ""
+
+#: dist/include/Core/Request/LogListAction.php:78
+#: include/Core/Request/LogListAction.php:78
+msgid "Raw Email Content"
+msgstr ""
+
+#: dist/include/Core/Request/LogListAction.php:79
+#: include/Core/Request/LogListAction.php:79
+msgid "Preview Content as HTML"
+msgstr ""
+
+#: dist/include/Core/Request/LogListAction.php:92
+#: include/Core/Request/LogListAction.php:92
+msgid "Close"
+msgstr ""
+
+#: dist/include/Core/Request/LogListAction.php:168
+#: include/Core/Request/LogListAction.php:168
+msgid "There was some problem in deleting the email logs"
+msgstr ""
+
+#: dist/include/Core/Request/LogListAction.php:172
+#: include/Core/Request/LogListAction.php:172
+msgid "1 email log deleted."
+msgid_plural "%s email logs deleted"
+msgstr[0] ""
+msgstr[1] ""
+
+#: dist/include/Core/UI/Component/AdminUIEnhancer.php:69
+#: include/Core/UI/Component/AdminUIEnhancer.php:69
+msgid "Buy Addons"
+msgstr ""
+
+#: dist/include/Core/UI/Component/AdminUIEnhancer.php:85
+#: dist/include/Core/UI/Page/LogListPage.php:68
+#: dist/include/Core/UI/Page/LogListPage.php:69
+#: include/Core/UI/Component/AdminUIEnhancer.php:85
+#: include/Core/UI/Page/LogListPage.php:68
+#: include/Core/UI/Page/LogListPage.php:69
+msgid "View Logs"
+msgstr ""
+
+#: dist/include/Core/UI/Component/AdminUIEnhancer.php:86
+#: dist/include/Core/UI/Page/SettingsPage.php:94
+#: dist/include/Core/UI/Page/SettingsPage.php:95
+#: include/Core/UI/Component/AdminUIEnhancer.php:86
+#: include/Core/UI/Page/SettingsPage.php:94
+#: include/Core/UI/Page/SettingsPage.php:95
+msgid "Settings"
+msgstr ""
+
+#: dist/include/Core/UI/Component/AdminUIEnhancer.php:109
+#: include/Core/UI/Component/AdminUIEnhancer.php:109
+msgid "plugin"
+msgstr ""
+
+#: dist/include/Core/UI/Component/AdminUIEnhancer.php:109
+#: include/Core/UI/Component/AdminUIEnhancer.php:109
+msgid "Version"
+msgstr ""
+
+#: dist/include/Core/UI/Component/AdminUIEnhancer.php:109
+#: include/Core/UI/Component/AdminUIEnhancer.php:109
+msgid "by"
+msgstr ""
+
+#: dist/include/Core/UI/Component/DashboardWidget.php:30
+#: include/Core/UI/Component/DashboardWidget.php:30
+msgid "Email Logs Summary"
+msgstr ""
+
+#: dist/include/Core/UI/Component/DashboardWidget.php:44
+#: include/Core/UI/Component/DashboardWidget.php:44
+msgid "Total number of emails logged"
+msgstr ""
+
+#: dist/include/Core/UI/Component/DashboardWidget.php:50
+#: include/Core/UI/Component/DashboardWidget.php:50
+msgid "<a href=\"%s\">Email Logs</a>"
+msgstr ""
+
+#: dist/include/Core/UI/Component/DashboardWidget.php:51
+#: include/Core/UI/Component/DashboardWidget.php:51
+msgid "<a href=\"%s\">Settings</a>"
+msgstr ""
+
+#: dist/include/Core/UI/Component/DashboardWidget.php:52
+#: include/Core/UI/Component/DashboardWidget.php:52
+msgid "<a href=\"%s\">Addons</a>"
+msgstr ""
+
+#: dist/include/Core/UI/ListTable/LogListTable.php:138
+#: include/Core/UI/ListTable/LogListTable.php:138
+msgid "%s @ %s"
+msgstr ""
+
+#: dist/include/Core/UI/ListTable/LogListTable.php:156
+#: include/Core/UI/ListTable/LogListTable.php:156
+msgid "Email Content"
+msgstr ""
+
+#: dist/include/Core/UI/ListTable/LogListTable.php:157
+#: include/Core/UI/ListTable/LogListTable.php:157
+msgid "View Content"
+msgstr ""
+
+#: dist/include/Core/UI/ListTable/LogListTable.php:171
+#: dist/include/Core/UI/ListTable/LogListTable.php:252
+#: include/Core/UI/ListTable/LogListTable.php:171
+#: include/Core/UI/ListTable/LogListTable.php:252
+msgid "Delete"
+msgstr ""
+
+#: dist/include/Core/UI/ListTable/LogListTable.php:253
+#: include/Core/UI/ListTable/LogListTable.php:253
+msgid "Delete All Logs"
+msgstr ""
+
+#: dist/include/Core/UI/ListTable/LogListTable.php:286
+#: include/Core/UI/ListTable/LogListTable.php:286
+msgid "Your email log is empty"
+msgstr ""
+
+#: dist/include/Core/UI/ListTable/LogListTable.php:313
+#: include/Core/UI/ListTable/LogListTable.php:313
+msgid "Search by date"
+msgstr ""
+
+#: dist/include/Core/UI/ListTable/LogListTable.php:314
+#: include/Core/UI/ListTable/LogListTable.php:314
+msgid "Search by term"
+msgstr ""
+
+#: dist/include/Core/UI/Page/AddonListPage.php:23
+#: dist/include/Core/UI/Page/AddonListPage.php:24
+#: dist/include/Core/UI/Page/BasePage.php:78
+#: include/Core/UI/Page/AddonListPage.php:23
+#: include/Core/UI/Page/AddonListPage.php:24
+#: include/Core/UI/Page/BasePage.php:78
+msgid "Add-ons"
+msgstr ""
+
+#: dist/include/Core/UI/Page/AddonListPage.php:40
+#: include/Core/UI/Page/AddonListPage.php:40
+msgid "Email Log Add-ons"
+msgstr ""
+
+#: dist/include/Core/UI/Page/AddonListPage.php:44
+#: include/Core/UI/Page/AddonListPage.php:44
+msgid ""
+"These add-ons provide additional functionality to Email Log plugin and are "
+"available for purchase."
+msgstr ""
+
+#: dist/include/Core/UI/Page/AddonListPage.php:45
+#: include/Core/UI/Page/AddonListPage.php:45
+msgid ""
+"If your license includes the add-ons below, you will be able to install them "
+"from here with one-click."
+msgstr ""
+
+#: dist/include/Core/UI/Page/BasePage.php:49
+#: include/Core/UI/Page/BasePage.php:49
+msgid ""
+"Email Log is a WordPress plugin that allows you to easily log and view all "
+"emails sent from WordPress."
+msgstr ""
+
+#: dist/include/Core/UI/Page/BasePage.php:52
+#: include/Core/UI/Page/BasePage.php:52
+msgid "You can view the logged emails from the View Logs screen. "
+msgstr ""
+
+#: dist/include/Core/UI/Page/BasePage.php:54
+#: include/Core/UI/Page/BasePage.php:54
+msgid ""
+"Check the <a target=\"_blank\" rel=\"noopener\" href=\"%s\">documentation "
+"about the View Logs screen</a> for more details."
+msgstr ""
+
+#: dist/include/Core/UI/Page/BasePage.php:60
+#: include/Core/UI/Page/BasePage.php:60
+msgid ""
+"You can perform advanced actions like re-sending email, automatically "
+"forwarding emails or export logs with our <a target=\"_blank\" rel=\"noopener"
+"\" href=\"%s\">premium plugins</a>."
+msgstr ""
+
+#: dist/include/Core/UI/Page/BasePage.php:67
+#: include/Core/UI/Page/BasePage.php:67
+msgid "About Plugin"
+msgstr ""
+
+#: dist/include/Core/UI/Page/BasePage.php:75
+#: include/Core/UI/Page/BasePage.php:75
+msgid "More information"
+msgstr ""
+
+#: dist/include/Core/UI/Page/BasePage.php:76
+#: include/Core/UI/Page/BasePage.php:76
+msgid "Documentation"
+msgstr ""
+
+#: dist/include/Core/UI/Page/BasePage.php:77
+#: include/Core/UI/Page/BasePage.php:77
+msgid "Support"
+msgstr ""
+
+#. #-#-#-#-#  email-log.pot (Email Log 2.3.0)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: dist/include/Core/UI/Page/LogListPage.php:57
+#: dist/include/Core/UI/Page/LogListPage.php:58
+#: include/Core/UI/Page/LogListPage.php:57
+#: include/Core/UI/Page/LogListPage.php:58
+msgid "Email Log"
+msgstr ""
+
+#: dist/include/Core/UI/Page/LogListPage.php:100
+#: include/Core/UI/Page/LogListPage.php:100
+msgid "Email Logs"
+msgstr ""
+
+#: dist/include/Core/UI/Page/LogListPage.php:105
+#: include/Core/UI/Page/LogListPage.php:105
+msgid "Search Logs"
+msgstr ""
+
+#: dist/include/Core/UI/Page/LogListPage.php:128
+#: include/Core/UI/Page/LogListPage.php:128
+msgid "Entries per page"
+msgstr ""
+
+#: dist/include/Core/UI/Page/SettingsPage.php:111
+#: include/Core/UI/Page/SettingsPage.php:111
+msgid "Email Log Settings"
+msgstr ""
+
+#: dist/include/Core/UI/Page/SettingsPage.php:119
+#: include/Core/UI/Page/SettingsPage.php:119
+msgid "Save"
+msgstr ""
+
+#: dist/include/Core/UI/Page/SystemInfoPage.php:41
+#: dist/include/Core/UI/Page/SystemInfoPage.php:42
+#: include/Core/UI/Page/SystemInfoPage.php:41
+#: include/Core/UI/Page/SystemInfoPage.php:42
+msgid "System Info"
+msgstr ""
+
+#: dist/include/Core/UI/Page/SystemInfoPage.php:70
+#: include/Core/UI/Page/SystemInfoPage.php:70
+msgid "Please include this information when posting support requests."
+msgstr ""
+
+#: dist/include/Core/UI/Page/SystemInfoPage.php:78
+#: include/Core/UI/Page/SystemInfoPage.php:78
+msgid ""
+"DISABLE_WP_CRON is <a href=\"%s\" rel=\"noopener\" target=\"_blank"
+"\">enabled</a>. This prevents scheduler from running."
+msgstr ""
+
+#: dist/include/Core/UI/Page/SystemInfoPage.php:84
+#: include/Core/UI/Page/SystemInfoPage.php:84
+msgid "Email Log  - System Info"
+msgstr ""
+
+#: dist/include/Core/UI/Page/SystemInfoPage.php:94
+#: include/Core/UI/Page/SystemInfoPage.php:94
+msgid "Download System Info File"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:16
+#: include/Core/UI/Setting/CoreSetting.php:16
+msgid "Core Email Log Settings"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:20
+#: include/Core/UI/Setting/CoreSetting.php:20
+msgid "Allowed User Roles"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:21
+#: include/Core/UI/Setting/CoreSetting.php:21
+msgid "Remove Data on Uninstall?"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:22
+#: include/Core/UI/Setting/CoreSetting.php:22
+msgid "Disable Dashboard Widget"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:23
+#: include/Core/UI/Setting/CoreSetting.php:23
+msgid "Database Size Notification"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:73
+#: include/Core/UI/Setting/CoreSetting.php:73
+msgid "Administrator"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:87
+#: include/Core/UI/Setting/CoreSetting.php:87
+msgid ""
+"<strong>Note:</strong> Users with the above User Roles can view Email Logs."
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:88
+#: include/Core/UI/Setting/CoreSetting.php:88
+msgid "Administrator role always has access and cannot be disabled."
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:123
+#: include/Core/UI/Setting/CoreSetting.php:123
+msgid ""
+"Check this box if you would like to completely remove all of its data when "
+"the plugin is deleted."
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:128
+#: include/Core/UI/Setting/CoreSetting.php:128
+msgid ""
+"<strong>Note:</strong> You can also export the Email Logs using our <a href="
+"\"%s\" rel=\"noopener noreferrer\" target=\"_blank\">Export Logs</a> add-on."
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:216
+#: include/Core/UI/Setting/CoreSetting.php:216
+msgid "Check this box if you would like to disable dashboard widget."
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:221
+#: include/Core/UI/Setting/CoreSetting.php:221
+msgid ""
+"<strong>Note:</strong> Each users can also disable dashboard widget using "
+"screen options"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:262
+#: include/Core/UI/Setting/CoreSetting.php:262
+msgid "Notify %1$s if there are more than %2$s logs."
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:270
+#: include/Core/UI/Setting/CoreSetting.php:270
+msgid "%1$s There are %2$s email logs currently logged in the database."
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:279
+#: include/Core/UI/Setting/CoreSetting.php:279
+msgid ""
+"Last notification email was sent on %1$s. Click %2$s button to reset sending "
+"the notification."
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:434
+#: include/Core/UI/Setting/CoreSetting.php:434
+msgid "Email Log Plugin: Your log threshold of %s has been met"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:486
+#: include/Core/UI/Setting/CoreSetting.php:486
+msgid ""
+"Currently there are %1$s logged, which is more than the threshold that is "
+"set in the %2$s screen. You can delete some logs or increase the threshold. "
+"You can also use our %3$s add-on to automatically delete logs"
+msgstr ""
+
+#: dist/include/Core/UI/Setting/CoreSetting.php:487
+#: include/Core/UI/Setting/CoreSetting.php:487
+msgid " email log"
+msgid_plural " email logs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: dist/include/Util/helper.php:161 include/Util/helper.php:161
+msgid "Auto delete logs cron will be triggered next at"
+msgstr ""
+
+#: dist/include/Util/helper.php:264 include/Util/helper.php:264
+msgid "ID"
+msgstr ""
+
+#: dist/include/Util/helper.php:269 include/Util/helper.php:269
+msgid "Message"
+msgstr ""
+
+#: dist/include/Util/helper.php:270 include/Util/helper.php:270
+msgid "From"
+msgstr ""
+
+#: dist/include/Util/helper.php:271 include/Util/helper.php:271
+msgid "CC"
+msgstr ""
+
+#: dist/include/Util/helper.php:272 include/Util/helper.php:272
+msgid "BCC"
+msgstr ""
+
+#: dist/include/Util/helper.php:273 include/Util/helper.php:273
+msgid "Reply To"
+msgstr ""
+
+#: dist/include/Util/helper.php:274 dist/include/Util/helper.php:275
+#: include/Util/helper.php:274 include/Util/helper.php:275
+msgid "Attachment"
+msgstr ""
+
+#: dist/include/libraries/EDD_SL_Plugin_Updater.php:201
+#: include/libraries/EDD_SL_Plugin_Updater.php:201
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+
+#: dist/include/libraries/EDD_SL_Plugin_Updater.php:209
+#: include/libraries/EDD_SL_Plugin_Updater.php:209
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+
+#: dist/include/libraries/EDD_SL_Plugin_Updater.php:399
+#: include/libraries/EDD_SL_Plugin_Updater.php:399
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: dist/include/libraries/EDD_SL_Plugin_Updater.php:399
+#: include/libraries/EDD_SL_Plugin_Updater.php:399
+msgid "Error"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/parsers.php:42
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/parsers.php:72
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/parsers.php:80
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/parsers.php:43
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/parsers.php:84
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/parsers.php:89
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/parsers.php:279
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/parsers.php:468
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:134
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:143
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:194
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:198
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:207
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:135
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:178
+msgid "All done."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:178
+msgid "Have fun!"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:179
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:199
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:215
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:240
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:266
+msgid "Assign Authors"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:267
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:269
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:279
+msgid "Import Attachments"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:282
+msgid "Download and import file attachments"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:286
+msgid "Submit"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:299
+msgid "Import author:"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:310
+msgid "or create new user with login name:"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:313
+msgid "as a new user:"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:321
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:323
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:324
+msgid "- Select -"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:374
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:425
+msgid "Failed to import category %s"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:465
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:511
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:652
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:537
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:559
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:618
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:783
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:790
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:853
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:866
+msgid "Invalid file type"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:910
+msgid "Remote server did not respond"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:916
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:923
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:928
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:934
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:1033
+msgid "Import WordPress"
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:1040
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:1055
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:1056
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: vendor/lucatume/wp-browser/src/data/plugins/wordpress-importer/wordpress-importer.php:1130
+msgid ""
+"Import <strong>posts, pages, comments, custom fields, categories, and tags</"
+"strong> from a WordPress export file."
+msgstr ""
+
+#: vendor/sudar/wp-system-info/src/SystemInfo.php:78
+msgid ""
+"To copy the system info, click below then press Ctrl + C (PC) or Cmd + C "
+"(Mac)."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpemaillog.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Logs every email sent through WordPress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sudar"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://sudarmuthu.com/"
+msgstr ""
