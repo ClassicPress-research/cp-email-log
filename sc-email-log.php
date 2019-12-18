@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/simplycomputing/sc-email-log
  * Description: Logs every email sent through ClassicPress
  *
- * Version: 1.0.1
+ * Version: 1.0.2
  *
  * Author: Alan Coggins 
  * Author URI: https://simplycomputing.com.au
