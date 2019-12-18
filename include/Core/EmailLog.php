@@ -17,12 +17,7 @@ class EmailLog {
 	 *
 	 * @var string
 	 */
-	const VERSION = '2.3.1';
-
-	/**
-	 * Email Log Store URL.
-	 */
-	const STORE_URL = 'https://wpemaillog.com';
+	const VERSION = '1.0.0';
 
 	/**
 	 * Flag to track if the plugin is loaded.
@@ -70,16 +65,6 @@ class EmailLog {
 	public $table_manager;
 
 	/**
-	 * Add-on Licenser.
-	 * For non-admin requests it will not be set.
-	 *
-	 * @since 2.0
-	 *
-	 * @var \EmailLog\Addon\License\Licenser
-	 */
-	private $licenser = null;
-
-	/**
 	 * List of loadies.
 	 *
 	 * @var Loadie[]
@@ -101,26 +86,6 @@ class EmailLog {
 		$this->add_loadie( $table_manager );
 
 		$this->translations_path = dirname( plugin_basename( $this->plugin_file ) ) . '/languages/' ;
-	}
-
-	/**
-	 * Set Licenser.
-	 *
-	 * @param \EmailLog\Addon\License\Licenser $licenser Add-on Licenser.
-	 */
-	public function set_licenser( $licenser ) {
-		if ( $this->add_loadie( $licenser ) ) {
-			$this->licenser = $licenser;
-		}
-	}
-
-	/**
-	 * Get Licenser.
-	 *
-	 * @return \EmailLog\Addon\License\Licenser|null
-	 */
-	public function get_licenser() {
-		return $this->licenser;
 	}
 
 	/**
@@ -198,16 +163,5 @@ class EmailLog {
 	 */
 	public function get_plugin_file() {
 		return $this->plugin_file;
-	}
-
-	/**
-	 * Get Email Log Store URL.
-	 *
-	 * @since 2.0.0
-	 *
-	 * @return string Store URL
-	 */
-	public function get_store_url() {
-		return self::STORE_URL;
 	}
 }
