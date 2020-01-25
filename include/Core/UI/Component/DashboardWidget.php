@@ -1,6 +1,6 @@
 <?php namespace EmailLog\Core\UI\Component;
 
-use EmailLog\Core\Loadie;
+
 use EmailLog\Util;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  *
  * @since 2.2.0
  */
-class DashboardWidget implements Loadie {
+class DashboardWidget {
 
 	/**
 	 * Setup hooks.
@@ -41,7 +41,7 @@ class DashboardWidget implements Loadie {
 		?>
 
 		<p>
-			<?php _e( 'Total number of emails logged' , 'email-log' ); ?>: <strong><?php echo number_format( absint( $logs_count ), 0, ',', ',' ); ?></strong>
+			<?php _e( 'Total number of emails logged', 'email-log' ); ?>: <strong><?php echo number_format( absint( $logs_count ), 0, ',', ',' ); ?></strong>
 		</p>
 
 		<?php Util\render_auto_delete_logs_next_run_schedule(); ?>

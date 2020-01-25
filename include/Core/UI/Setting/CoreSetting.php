@@ -120,7 +120,7 @@ class CoreSetting extends Setting {
 		?>
 
 		<input type="checkbox" name="<?php echo esc_attr( $field_name ); ?>" value="true" <?php checked( 'true', $remove_data ); ?>>
-		<?php _e( 'Check this box if you would like to completely remove all of its data when the plugin is deleted.', 'email-log' ) ?>
+		<?php _e( 'Check this box if you would like to completely remove all of its data when the plugin is deleted.', 'email-log' ); ?>
 
 		<?php
 	}
@@ -204,7 +204,7 @@ class CoreSetting extends Setting {
 		?>
 
 		<input type="checkbox" name="<?php echo esc_attr( $field_name ); ?>" value="true" <?php checked( 'true', $hide_dashboard_widget ); ?>>
-		<?php _e( 'Check this box if you would like to disable dashboard widget.', 'email-log' ) ?>
+		<?php _e( 'Check this box if you would like to disable dashboard widget.', 'email-log' ); ?>
 
 		<?php
 	}
@@ -230,40 +230,52 @@ class CoreSetting extends Setting {
 		$logs_count = $email_log->table_manager->get_logs_count();
 
 		$admin_email_input_field = sprintf(
-			'<input type="email" name="%1$s" value="%2$s" size="35" />', esc_attr( $admin_email_field_name ), empty( $db_size_notification_data['admin_email'] ) ? get_option( 'admin_email', '' ) : esc_attr( $db_size_notification_data['admin_email'] ) );
+			'<input type="email" name="%1$s" value="%2$s" size="35" />',
+			esc_attr( $admin_email_field_name ),
+			empty( $db_size_notification_data['admin_email'] ) ? get_option( 'admin_email', '' ) : esc_attr( $db_size_notification_data['admin_email'] )
+		);
 
-		$logs_threshold_input_field = sprintf( '<input type="number" name="%1$s" placeholder="5000" value="%2$s" min="0" max="99999999" />',
+		$logs_threshold_input_field = sprintf(
+			'<input type="number" name="%1$s" placeholder="5000" value="%2$s" min="0" max="99999999" />',
 			esc_attr( $logs_threshold_field_name ),
 			empty( $db_size_notification_data['logs_threshold'] ) ? '' : esc_attr( $db_size_notification_data['logs_threshold'] )
 		);
 		?>
 
-        <input type="checkbox" name="<?php echo esc_attr( $db_size_notification_field_name ); ?>" value="true" <?php
-		checked( true, $db_size_notification_data['notify'] ); ?> />
+		<input type="checkbox" name="<?php echo esc_attr( $db_size_notification_field_name ); ?>" value="true" 
+												<?php
+												checked( true, $db_size_notification_data['notify'] );
+												?>
+		 />
 		<?php
 		// The values within each field are already escaped.
-		printf( __( 'Notify %1$s if there are more than %2$s logs.', 'email-log' ),
+		printf(
+			__( 'Notify %1$s if there are more than %2$s logs.', 'email-log' ),
 			$admin_email_input_field,
 			$logs_threshold_input_field
 		);
 		?>
-        <p>
-            <em>
-				<?php printf(
+		<p>
+			<em>
+				<?php
+				printf(
 					__( '%1$s There are %2$s email logs currently logged in the database.', 'email-log' ),
 					'<strong>Note:</strong>',
 					'<strong>' . esc_attr( $logs_count ) . '</strong>'
-				); ?>
-            </em>
-        </p>
+				);
+				?>
+			</em>
+		</p>
 		<?php if ( ! empty( $db_size_notification_data['threshold_email_last_sent'] ) ) : ?>
-            <p>
-				<?php printf(
+			<p>
+				<?php
+				printf(
 					__( 'Last notification email was sent on %1$s. Click %2$s button to reset sending the notification.', 'email-log' ),
 					'<strong>' . get_date_from_gmt( date( 'Y-m-d H:i:s', $db_size_notification_data['threshold_email_last_sent'] ), \EmailLog\Util\get_user_defined_date_time_format() ) . '</strong>',
 					'<b>Save</b>'
-				); ?>
-            </p>
+				);
+				?>
+			</p>
 		<?php endif; ?>
 		<?php
 	}
@@ -466,15 +478,16 @@ EOT;
 	public function render_log_threshold_met_notice() {
 		$email_log      = email_log();
 		$logs_count     = absint( $email_log->table_manager->get_logs_count() );
-		$notice_message = sprintf( __( 'Currently there are %1$s logged, which is more than the threshold that is set in the %2$s screen. You can delete some logs or increase the threshold. You can also use our %3$s add-on to automatically delete logs', 'email-log' ),
+		$notice_message = sprintf(
+			__( 'Currently there are %1$s logged, which is more than the threshold that is set in the %2$s screen. You can delete some logs or increase the threshold. You can also use our %3$s add-on to automatically delete logs', 'email-log' ),
 			$logs_count . _n( ' email log', ' email logs', $logs_count, 'email-log' ),
 			'<a href="' . esc_url( admin_url( 'admin.php?page=' . SettingsPage::PAGE_SLUG ) ) . '">settings</a> screen',
 			'<a href="' . esc_url( 'https://wpemaillog.com/addons/auto-delete-logs/' ) . '">Auto Delete Logs</a>'
-			 );
+		);
 		?>
-        <div class="notice notice-warning is-dismissible">
-            <p><?php echo $notice_message; ?></p>
-        </div>
+		<div class="notice notice-warning is-dismissible">
+			<p><?php echo $notice_message; ?></p>
+		</div>
 		<?php
 	}
 

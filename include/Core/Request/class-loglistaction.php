@@ -1,6 +1,6 @@
 <?php namespace EmailLog\Core\Request;
 
-use EmailLog\Core\Loadie;
+
 use EmailLog\Core\UI\Page\LogListPage;
 
 /**
@@ -8,14 +8,14 @@ use EmailLog\Core\UI\Page\LogListPage;
  *
  * @since 2.0.0
  */
-class LogListAction implements Loadie {
+class LogListAction {
 
 	/**
 	 * Setup actions.
 	 *
 	 * @inheritdoc
 	 */
-	public function load() {
+	public function __construct() {
 		add_action( 'wp_ajax_el-log-list-view-message', array( $this, 'view_log_message' ) );
 
 		add_action( 'el-log-list-delete', array( $this, 'delete_logs' ) );
@@ -169,7 +169,8 @@ class LogListAction implements Loadie {
 		$type    = 'error';
 
 		if ( absint( $logs_deleted ) > 0 ) {
-			$message = sprintf( _n( '1 email log deleted.', '%s email logs deleted', $logs_deleted, 'email-log' ), $logs_deleted );
+			// translators: %s: number deleted
+			$message = sprintf( _n( '%s email log deleted.', '%s email logs deleted', $logs_deleted, 'email-log' ), number_format_i18n( $logs_deleted ) );
 			$type    = 'updated';
 		}
 

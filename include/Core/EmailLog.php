@@ -1,7 +1,6 @@
 <?php namespace EmailLog\Core;
 
 use EmailLog\Core\DB\TableManager;
-use EmailLog\EmailLogAutoloader;
 
 /**
  * The main plugin class.
@@ -49,13 +48,6 @@ class EmailLog {
 	public $translations_path;
 
 	/**
-	 * Auto loader.
-	 *
-	 * @var \EmailLog\EmailLogAutoloader
-	 */
-	public $loader;
-
-	/**
 	 * Database Table Manager.
 	 *
 	 * @since 2.0
@@ -65,49 +57,17 @@ class EmailLog {
 	public $table_manager;
 
 	/**
-	 * List of loadies.
-	 *
-	 * @var Loadie[]
-	 */
-	private $loadies = array();
-
-	/**
 	 * Initialize the plugin.
 	 *
 	 * @param string             $file          Plugin file.
 	 * @param EmailLogAutoloader $loader        EmailLog Autoloader.
 	 * @param TableManager       $table_manager Table Manager.
 	 */
-	public function __construct( $file, $loader, $table_manager ) {
+	public function __construct( $file, $table_manager ) {
 		$this->plugin_file   = $file;
-		$this->loader        = $loader;
 		$this->table_manager = $table_manager;
 
-		$this->add_loadie( $table_manager );
-
-		$this->translations_path = dirname( plugin_basename( $this->plugin_file ) ) . '/languages/' ;
-	}
-
-	/**
-	 * Add an Email Log Loadie.
-	 * The `load()` method of the Loadies will be called when Email Log is loaded.
-	 *
-	 * @param \EmailLog\Core\Loadie $loadie Loadie to be loaded.
-	 *
-	 * @return bool False if Email Log is already loaded or if $loadie is not of `Loadie` type. True otherwise.
-	 */
-	public function add_loadie( $loadie ) {
-		if ( $this->loaded ) {
-			return false;
-		}
-
-		if ( ! $loadie instanceof Loadie ) {
-			return false;
-		}
-
-		$this->loadies[] = $loadie;
-
-		return true;
+		$this->translations_path = dirname( plugin_basename( $this->plugin_file ) ) . '/languages/';
 	}
 
 	/**
@@ -121,10 +81,6 @@ class EmailLog {
 		load_plugin_textdomain( 'email-log', false, $this->translations_path );
 
 		$this->table_manager->load();
-
-		foreach ( $this->loadies as $loadie ) {
-			$loadie->load();
-		}
 
 		$this->loaded = true;
 

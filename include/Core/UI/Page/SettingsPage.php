@@ -22,7 +22,6 @@ class SettingsPage extends BasePage {
 	 */
 	public function load() {
 		parent::load();
-
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
 	}
 
@@ -30,6 +29,7 @@ class SettingsPage extends BasePage {
 	 * Register settings and add setting sections and fields.
 	 */
 	public function register_settings() {
+		error_log( 'here' );
 		$sections = $this->get_setting_sections();
 
 		foreach ( $sections as $section ) {

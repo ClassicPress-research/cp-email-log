@@ -10,9 +10,9 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  *
  * @since 2.1.0
  */
-class AdminCapabilityGiver implements Loadie {
+class AdminCapabilityGiver {
 
-	public function load() {
+	public function __construct() {
 		add_filter( 'user_has_cap', array( $this, 'add_cap_to_admin_cap_list' ), 10, 4 );
 	}
 

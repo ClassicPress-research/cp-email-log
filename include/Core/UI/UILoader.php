@@ -1,6 +1,6 @@
 <?php namespace EmailLog\Core\UI;
 
-use EmailLog\Core\Loadie;
+use EmailLog\Util;
 use EmailLog\Core\UI\Page\LogListPage;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  *
  * @since 2.0
  */
-class UILoader implements Loadie {
+class UILoader {
 
 	/**
 	 * UI Component List.
@@ -33,6 +33,7 @@ class UILoader implements Loadie {
 	 * @inheritdoc
 	 */
 	public function load() {
+
 		$this->initialize_components();
 		$this->initialize_pages();
 
@@ -49,7 +50,7 @@ class UILoader implements Loadie {
 		$this->components['core_settings'] = new Setting\CoreSetting();
 		$dashboard_status                  = false;
 		$options                           = get_option( 'email-log-core' );
-		if( isset( $options['hide_dashboard_widget'] ) ) {
+		if ( isset( $options['hide_dashboard_widget'] ) ) {
 			$dashboard_status = $options['hide_dashboard_widget'];
 		}
 
@@ -66,8 +67,8 @@ class UILoader implements Loadie {
 	protected function initialize_components() {
 		if ( current_user_can( LogListPage::CAPABILITY ) ) {
 			$this->components['admin_ui_enhancer'] = new Component\AdminUIEnhancer();
-			if( ! $this->is_show_dashboard_widget() ) {
-				$this->components['dashboard_widget']  = new Component\DashboardWidget();
+			if ( ! $this->is_show_dashboard_widget() ) {
+				$this->components['dashboard_widget'] = new Component\DashboardWidget();
 			}
 		}
 	}
@@ -80,7 +81,7 @@ class UILoader implements Loadie {
 	 * @access protected
 	 */
 	protected function initialize_pages() {
-		$this->pages['log_list_page']    = new Page\LogListPage();
-		$this->pages['settings_page']    = new Page\SettingsPage();
+		$this->pages['log_list_page'] = new Page\LogListPage();
+		$this->pages['settings_page'] = new Page\SettingsPage();
 	}
 }

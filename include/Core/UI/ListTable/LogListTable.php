@@ -30,12 +30,15 @@ class LogListTable extends \WP_List_Table {
 	public function __construct( $page, $args = array() ) {
 		$this->page = $page;
 
-		$args = wp_parse_args( $args, array(
-			'singular' => 'email-log',     // singular name of the listed records
-			'plural'   => 'email-logs',    // plural name of the listed records
-			'ajax'     => false,           // does this table support ajax?
-			'screen'   => $this->page->get_screen(),
-		) );
+		$args = wp_parse_args(
+			$args,
+			array(
+				'singular' => 'email-log',     // singular name of the listed records
+				'plural'   => 'email-logs',    // plural name of the listed records
+				'ajax'     => false,           // does this table support ajax?
+				'screen'   => $this->page->get_screen(),
+			)
+		);
 
 		parent::__construct( $args );
 	}
@@ -135,7 +138,7 @@ class LogListTable extends \WP_List_Table {
 	 */
 	protected function column_sent_date( $item ) {
 		$email_date = mysql2date(
-			sprintf( __( '%s @ %s', 'email-log' ), get_option( 'date_format', 'F j, Y' ), get_option( 'time_format', 'g:i A' ) ),
+			sprintf( __( '%1$s @ %2$s', 'email-log' ), get_option( 'date_format', 'F j, Y' ), get_option( 'time_format', 'g:i A' ) ),
 			$item->sent_date
 		);
 
@@ -151,7 +154,8 @@ class LogListTable extends \WP_List_Table {
 			'admin-ajax.php'
 		);
 
-		$actions['view-content'] = sprintf( '<a href="%1$s" class="thickbox" title="%2$s">%3$s</a>',
+		$actions['view-content'] = sprintf(
+			'<a href="%1$s" class="thickbox" title="%2$s">%3$s</a>',
 			esc_url( $content_ajax_url ),
 			__( 'Email Content', 'email-log' ),
 			__( 'View Content', 'email-log' )
@@ -166,7 +170,8 @@ class LogListTable extends \WP_List_Table {
 		);
 		$delete_url = add_query_arg( $this->page->get_nonce_args(), $delete_url );
 
-		$actions['delete'] = sprintf( '<a href="%s">%s</a>',
+		$actions['delete'] = sprintf(
+			'<a href="%s">%s</a>',
 			esc_url( $delete_url ),
 			__( 'Delete', 'email-log' )
 		);
@@ -181,7 +186,8 @@ class LogListTable extends \WP_List_Table {
 		 */
 		$actions = apply_filters( 'el_row_actions', $actions, $item );
 
-		return sprintf( '%1$s <span style="color:silver">(id:%2$s)</span>%3$s',
+		return sprintf(
+			'%1$s <span style="color:silver">(id:%2$s)</span>%3$s',
 			/*$1%s*/ $email_date,
 			/*$2%s*/ $item->id,
 			/*$3%s*/ $this->row_actions( $actions )
@@ -272,11 +278,13 @@ class LogListTable extends \WP_List_Table {
 		$this->items = $items;
 
 		// Register pagination options & calculations.
-		$this->set_pagination_args( array(
-			'total_items' => $total_items,
-			'per_page'    => $per_page,
-			'total_pages' => ceil( $total_items / $per_page ),
-		) );
+		$this->set_pagination_args(
+			array(
+				'total_items' => $total_items,
+				'per_page'    => $per_page,
+				'total_pages' => ceil( $total_items / $per_page ),
+			)
+		);
 	}
 
 	/**
@@ -299,14 +307,18 @@ class LogListTable extends \WP_List_Table {
 		$input_date_id  = $input_id . '-search-date-input';
 		$input_date_val = ( ! empty( $_REQUEST['d'] ) ) ? sanitize_text_field( $_REQUEST['d'] ) : '';
 
-		if ( ! empty( $_REQUEST['orderby'] ) )
+		if ( ! empty( $_REQUEST['orderby'] ) ) {
 			echo '<input type="hidden" name="orderby" value="' . esc_attr( $_REQUEST['orderby'] ) . '" />';
-		if ( ! empty( $_REQUEST['order'] ) )
+		}
+		if ( ! empty( $_REQUEST['order'] ) ) {
 			echo '<input type="hidden" name="order" value="' . esc_attr( $_REQUEST['order'] ) . '" />';
-		if ( ! empty( $_REQUEST['post_mime_type'] ) )
+		}
+		if ( ! empty( $_REQUEST['post_mime_type'] ) ) {
 			echo '<input type="hidden" name="post_mime_type" value="' . esc_attr( $_REQUEST['post_mime_type'] ) . '" />';
-		if ( ! empty( $_REQUEST['detached'] ) )
+		}
+		if ( ! empty( $_REQUEST['detached'] ) ) {
 			echo '<input type="hidden" name="detached" value="' . esc_attr( $_REQUEST['detached'] ) . '" />';
+		}
 		?>
 		<p class="search-box">
 			<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo $text; ?>:</label>

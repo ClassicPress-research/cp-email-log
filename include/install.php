@@ -89,7 +89,7 @@ class Email_Log_Init {
 	private static function create_emaillog_table() {
 		global $wpdb;
 
-		$table_name = $wpdb->prefix . EmailLog::TABLE_NAME;
+		$table_name      = $wpdb->prefix . EmailLog::TABLE_NAME;
 		$charset_collate = $wpdb->get_charset_collate();
 
 		if ( $wpdb->get_var( "show tables like '{$table_name}'" ) != $table_name ) {
@@ -121,4 +121,4 @@ add_action( 'wpmu_new_blog', array( 'Email_Log_Init', 'on_create_blog' ), 10, 6 
 
 // when a blog is deleted in multisite
 add_filter( 'wpmu_drop_tables', array( 'Email_Log_Init', 'on_delete_blog' ) );
-?>
+

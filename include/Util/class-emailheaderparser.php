@@ -77,7 +77,7 @@ class EmailHeaderParser {
 			$split_header = explode( ':', $header );
 			$value        = $this->parse_header_line( $split_header );
 
-			if ( trim( $value ) != '' ) {
+			if ( '' !== trim( $value ) ) {
 				switch ( strtolower( $split_header[0] ) ) {
 					case 'from':
 						$data['from'] = $value;
@@ -117,7 +117,7 @@ class EmailHeaderParser {
 	 */
 	private function parse_header_line( $header ) {
 		$value = '';
-		if ( 2 == count( $header ) ) {
+		if ( 2 === count( $header ) ) {
 			if ( is_array( $header[1] ) ) {
 				$value = trim( implode( ',', array_map( 'trim', $header[1] ) ) );
 			} else {

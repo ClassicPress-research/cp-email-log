@@ -6,12 +6,12 @@
  * @package EmailLog\Core
  * @since   2.0
  */
-class EmailLogger implements Loadie {
+class EmailLogger {
 
 	/**
 	 * Load the logger.
 	 */
-	public function load() {
+	public function __construct() {
 		add_filter( 'wp_mail', array( $this, 'log_email' ) );
 		add_action( 'wp_mail_failed', array( $this, 'update_email_fail_status' ) );
 	}

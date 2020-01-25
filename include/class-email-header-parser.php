@@ -68,14 +68,14 @@ class Email_Header_Parser {
 	 * @return array Parsed headers.
 	 */
 	private function parse( $headers ) {
-		$data = array();
+		$data        = array();
 		$arr_headers = explode( "\n", $headers );
 
 		foreach ( $arr_headers as $header ) {
 			$split_header = explode( ':', $header );
-			$value = $this->parse_header_line( $split_header );
+			$value        = $this->parse_header_line( $split_header );
 
-			if ( trim( $value ) != '' ) {
+			if ( '' !== trim( $value ) ) {
 				switch ( strtolower( $split_header[0] ) ) {
 					case 'from':
 						$data['from'] = $value;
@@ -114,7 +114,7 @@ class Email_Header_Parser {
 	 */
 	private function parse_header_line( $header ) {
 		$value = '';
-		if ( count( $header ) == 2 ) {
+		if ( 2 === count( $header ) ) {
 			if ( is_array( $header[1] ) ) {
 				$value = trim( implode( ',', array_map( 'trim', $header[1] ) ) );
 			} else {

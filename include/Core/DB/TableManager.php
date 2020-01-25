@@ -3,7 +3,7 @@
 /**
  * Handle installation and db table creation.
  */
-use EmailLog\Core\Loadie;
+
 use EmailLog\Util;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  *
  * @since 2.0.0
  */
-class TableManager implements Loadie {
+class TableManager {
 
 	/* Database table name */
 	const LOG_TABLE_NAME = 'email_log';
@@ -280,7 +280,7 @@ class TableManager implements Loadie {
 					}
 				}
 			} else {
-				$query_cond .= " WHERE ( to_email LIKE '%$search_term%' OR subject LIKE '%$search_term%' ) ";
+				$query_cond .= " WHERE ( to_email LIKE '%$search_term%' OR subject LIKE '%$search_term%' OR message LIKE '%$search_term%' ) ";
 			}
 		}
 
@@ -307,7 +307,7 @@ class TableManager implements Loadie {
 
 		// Adjust the query to take pagination into account.
 		if ( ! empty( $current_page_no ) && ! empty( $per_page ) ) {
-			$offset     = ( $current_page_no - 1 ) * $per_page;
+			$offset      = ( $current_page_no - 1 ) * $per_page;
 			$query_cond .= ' LIMIT ' . (int) $offset . ',' . (int) $per_page;
 		}
 
@@ -431,7 +431,7 @@ class TableManager implements Loadie {
 		$wpdb->update(
 			$table_name,
 			array( 'result' => '0' ),
-			array( 'ID'     => $log_item_id ),
+			array( 'ID' => $log_item_id ),
 			array( '%d' ),
 			array( '%d' )
 		);

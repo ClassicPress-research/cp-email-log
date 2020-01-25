@@ -107,7 +107,7 @@ function checked_array( $values, $current ) {
 		return;
 	}
 
-	if ( in_array( $current, $values ) ) {
+	if ( in_array( $current, $values, true ) ) {
 		echo "checked='checked'";
 	}
 }
@@ -160,7 +160,7 @@ function render_auto_delete_logs_next_run_schedule() {
 		<p>
 			<?php _e( 'Auto delete logs cron will be triggered next at', 'email-log' ); ?>:
 			<?php $date_time_format = get_user_defined_date_time_format(); ?>
-			<strong><?php echo get_date_from_gmt( date( 'Y-m-d H:i:s', wp_next_scheduled( 'el_scheduled_delete_logs' ) ), $date_time_format ); ?></strong>
+			<strong><?php echo get_date_from_gmt( gmdate( 'Y-m-d H:i:s', wp_next_scheduled( 'el_scheduled_delete_logs' ) ), $date_time_format ); ?></strong>
 		</p>
 	<?php endif; ?>
 	<?php

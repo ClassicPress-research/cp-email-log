@@ -6,7 +6,7 @@
  *
  * Version: 1.0.2
  *
- * Author: Alan Coggins 
+ * Author: Alan Coggins
  * Author URI: https://simplycomputing.com.au
  * License: GPLv2
  * Text Domain: email-log
@@ -25,7 +25,7 @@
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
 // Load the Update Client. Yep, that's it.
-require_once('include/UpdateClient.class.php');
+//require_once('include/UpdateClient.class.php');
 
 /**
  * Load Email Log plugin.
@@ -40,32 +40,20 @@ function load_email_log( $plugin_file ) {
 
 	$plugin_dir = plugin_dir_path( $plugin_file );
 
-	// setup autoloader.
-	require_once 'include/EmailLogAutoloader.php';
+	require_once 'vendor/autoload.php';
 
-	$loader = new \EmailLog\EmailLogAutoloader();
-	$loader->add_namespace( 'EmailLog', $plugin_dir . 'include' );
-	$loader->add_namespace( 'Sudar\\WPSystemInfo', $plugin_dir . 'vendor/sudar/wp-system-info/src/' );
+	include_once $plugin_dir . 'include/Util/helper.php';
 
-	if ( file_exists( $plugin_dir . 'tests/' ) ) {
-		// if tests are present, then add them.
-		$loader->add_namespace( 'EmailLog', $plugin_dir . 'tests/wp-tests' );
-	}
+	$email_log = new \EmailLog\Core\EmailLog( $plugin_file, new \EmailLog\Core\DB\TableManager() );
 
-	$loader->add_file( $plugin_dir . 'include/Util/helper.php' );
+	new \EmailLog\Core\EmailLogger();
 
-	$loader->register();
+	add_action( 'init', array( new \EmailLog\Core\UI\UILoader(), 'load' ) );
 
-	$email_log = new \EmailLog\Core\EmailLog( $plugin_file, $loader, new \EmailLog\Core\DB\TableManager() );
-
-	$email_log->add_loadie( new \EmailLog\Core\EmailLogger() );
-	$email_log->add_loadie( new \EmailLog\Core\UI\UILoader() );
-
-	$email_log->add_loadie( new \EmailLog\Core\Request\NonceChecker() );
-	$email_log->add_loadie( new \EmailLog\Core\Request\LogListAction() );
+	new \EmailLog\Core\Request\NonceChecker();
+	new \EmailLog\Core\Request\LogListAction();
 
 	$capability_giver = new \EmailLog\Core\AdminCapabilityGiver();
-	$email_log->add_loadie( $capability_giver );
 
 	// `register_activation_hook` can't be called from inside any hook.
 	register_activation_hook( $plugin_file, array( $email_log->table_manager, 'on_activate' ) );

@@ -1,6 +1,6 @@
 <?php namespace EmailLog\Core\Request;
 
-use EmailLog\Core\Loadie;
+
 use EmailLog\Core\UI\Page\LogListPage;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  *
  * @since 2.0.0
  */
-class NonceChecker implements Loadie {
+class NonceChecker {
 
 	/**
 	 * Setup hooks.
 	 *
 	 * @inheritdoc
 	 */
-	public function load() {
+	public function __construct() {
 		add_action( 'admin_init', array( $this, 'check_nonce' ) );
 	}
 

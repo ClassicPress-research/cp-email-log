@@ -40,7 +40,7 @@ function email_log_delete_db_data() {
 
 	$option = get_option( 'email-log-core' );
 	if ( is_array( $option ) && array_key_exists( 'remove_on_uninstall', $option ) &&
-	     'true' === strtolower( $option['remove_on_uninstall'] ) ) {
+		'true' === strtolower( $option['remove_on_uninstall'] ) ) {
 
 		$remove_data_on_uninstall = true;
 	}
@@ -49,8 +49,10 @@ function email_log_delete_db_data() {
 	$table_name = $wpdb->prefix . 'email_log';
 
 	if ( $remove_data_on_uninstall ) {
-		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$table_name}'" ) == $table_name ) {
-			$wpdb->query( "DROP TABLE $table_name" );
+		$query = $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( $table_name ) );
+
+		if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( $table_name ) ) ) === $table_name ) {
+			$wpdb->query( $wpdb->prepare( 'DROP TABLE %s', $table_name ) );
 		}
 
 		delete_option( 'email-log-db' );

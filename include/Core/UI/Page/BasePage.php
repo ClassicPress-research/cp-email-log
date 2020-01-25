@@ -1,6 +1,6 @@
 <?php namespace EmailLog\Core\UI\Page;
 
-use EmailLog\Core\Loadie;
+
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  *
  * @since 2.0.0
  */
-abstract class BasePage implements Loadie {
+abstract class BasePage {
 
 	/**
 	 * Current page.
@@ -51,15 +51,15 @@ abstract class BasePage implements Loadie {
 				'<p>' .
 					__( 'You can view the logged emails from the View Logs screen. ', 'email-log' ) .
 					sprintf(
-						__( 'Check the <a target="_blank" rel="noopener" href="%s">documentation about the View Logs screen</a> for more details.', 'email-log' ),
-						'https://wpemaillog.com/docs/view-logged-email/?utm_campaign=Upsell&utm_medium=wpadmin&utm_source=help&utm_content=docs-content'
-					) .
+			__( 'Check the <a target="_blank" rel="noopener" href="%s">documentation about the View Logs screen</a> for more details.', 'email-log' ),
+			'https://wpemaillog.com/docs/view-logged-email/?utm_campaign=Upsell&utm_medium=wpadmin&utm_source=help&utm_content=docs-content'
+		) .
 				'</p>' .
 				'<p>' .
 					sprintf(
-						__( 'You can perform advanced actions like re-sending email, automatically forwarding emails or export logs with our <a target="_blank" rel="noopener" href="%s">premium plugins</a>.', 'email-log' ),
-						'https://wpemaillog.com/store/?utm_campaign=Upsell&utm_medium=wpadmin&utm_source=help&utm_content=store-content'
-					) .
+			__( 'You can perform advanced actions like re-sending email, automatically forwarding emails or export logs with our <a target="_blank" rel="noopener" href="%s">premium plugins</a>.', 'email-log' ),
+			'https://wpemaillog.com/store/?utm_campaign=Upsell&utm_medium=wpadmin&utm_source=help&utm_content=store-content'
+		) .
 				'</p>';
 
 		$this->get_screen()->add_help_tab(
